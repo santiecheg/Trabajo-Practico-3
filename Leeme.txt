@@ -1,0 +1,155 @@
+Este programa es una aplicación por consola que trabaja con un archivo CSV de Fórmula 1. El objetivo es cargar los datos de varias temporadas y permitir que el usuario consulte información mediante un menú.
+
+
+
+1. Método Main (punto de inicio del programa)
+
+Muestra un mensaje de bienvenida.
+
+Registra la hora de inicio de carga del archivo.
+
+Llama a ObtenerDatos() para leer el CSV y guardarlo en una matriz.
+
+Registra la hora de fin de carga y calcula el tiempo total utilizando IndicadorTiempoCarga().
+
+Muestra cuántos registros se cargaron.
+
+Finalmente, llama a MostrarMenu() para iniciar el menú principal.
+
+
+
+2. ObtenerDatos()
+
+Lee todas las líneas del archivo CSV.
+
+Detecta cuántas filas y cuántas columnas tiene el archivo.
+
+Guarda los datos en una matriz bidimensional (string[,]).
+
+Devuelve esa matriz con toda la información cargada.
+
+
+
+3. MostrarMenu()
+
+Muestra un menú con varias opciones.
+
+El usuario elige un número y, según la opción, el programa llama a distintas funciones.
+
+El menú se repite hasta que el usuario elige “Salir”.
+
+
+Las opciones disponibles incluyen:
+
+1. Buscar podios de un piloto
+
+
+2. Datos de campeonato por equipo y año
+
+
+3. Mayor remontada
+
+
+4. Equipos ordenados alfabéticamente
+
+
+5. Mostrar todos los datos
+
+
+6. Salir
+
+
+7. Nuevos indicadores (pilotos únicos, carrera con más participantes, pilotos con podio, registros por año)
+
+
+
+4. MostrarTodosLosDatos()
+
+Recorre toda la matriz y muestra cada fila con sus columnas, como un reporte completo de todos los datos cargados.
+
+
+
+5. BuscarPodiosPiloto()
+
+Pide el nombre de un piloto.
+
+Revisa todas las carreras y cuenta cuántas veces ese piloto terminó en el TOP 3.
+
+Muestra la cantidad total de podios.
+
+
+
+6. DatosCampeonatoEquipo()
+
+Pide un equipo y un año.
+
+Filtra todas las carreras que coincidan con esos datos.
+
+Muestra los puntos que consiguió el equipo en cada carrera.
+
+Suma los puntos totales de la temporada.
+
+
+
+7. MostrarRemontadaMasGrande()
+
+Calcula la mayor remontada comparando posición de salida y llegada.
+
+Muestra el piloto, la carrera y cuántos lugares ganó.
+
+
+8. MetodoBurbuja()
+
+Ordena un arreglo de strings usando el método de la burbuja (alfabéticamente).
+
+Se usa para ordenar los equipos por nombre.
+ 
+
+
+9. MostrarEquiposOrdenados()
+
+Recorre la matriz y obtiene solo los nombres únicos de los equipos.
+
+Los ordena con el método burbuja.
+
+Muestra la lista completa y cuántos equipos diferentes hay.
+
+
+
+10. IndicadorTiempoCarga()
+
+Recibe la hora de inicio y fin del proceso de carga del CSV.
+
+Calcula los milisegundos que tardó en leer el archivo.
+
+Lo muestra en pantalla como un indicador de rendimiento.
+
+
+
+NUEVOS INDICADORES
+
+11. CalcularPilotosUnicos()
+
+Usa un HashSet para contar pilotos sin repetir.
+
+Muestra cuántos pilotos distintos participaron.
+
+
+12. CarreraConMasParticipantes()
+
+Cuenta cuántas filas corresponden a cada carrera.
+
+Devuelve la carrera con más autos participantes.
+
+
+
+13. CalcularPilotosConPodio()
+
+Cuenta cuántos pilotos lograron al menos un podio (top 3).
+
+
+14. MostrarRegistrosPorAño()
+
+Cuenta cuántos registros tiene cada temporada.
+
+Muestra cuántos datos hay por año en el archivo.
